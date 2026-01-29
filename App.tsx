@@ -1,3 +1,4 @@
+
 import React, { useState, useMemo, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import AppCard from './components/AppCard';
@@ -171,7 +172,8 @@ const StoreContent: React.FC = () => {
         if (activeCategory === 'New' && !app.isNew) return false;
         if (activeCategory === 'Popular' && app.category !== 'Popular') return false; 
         if (activeCategory === 'Educational' && app.category !== 'Educational') return false;
-        if (activeCategory === 'Downloadable' && (!app.downloadUrl || app.downloadUrl.trim() === '')) return false;
+        // CHANGED: Strictly match category for Downloadable items to exclude Educational web links
+        if (activeCategory === 'Downloadable' && app.category !== 'Downloadable') return false;
       }
       
       if (searchQuery.trim() !== '') {

@@ -182,6 +182,26 @@ export const APP_DATA: AppItem[] = [
         { label: "ANCIENT HISTORY || SSC GK 4.0", url: "https://youtube.com/playlist?list=PLVdEbxG29AsZMn9UtxphyVp2jVjOSp1g9&si=6iRaGm9XMluzvW2R" },
         { label: "MEDIEVAL HISTORY || SSC GK 4.0", url: "https://youtube.com/playlist?list=PLVdEbxG29AsZQgfLwZrseSnoUsWyT0Koz&si=9G3D5NL7n3d2GC7J" }
     ]
+  },
+  {
+    id: '10',
+    name: 'Rojgar With Ankit APK',
+    shortName: 'RWA APK',
+    description: `✅ Official Android APK
+✅ Direct Download
+✅ Faster Performance
+✅ Native Mobile Experience
+👉 Install this file for Android Devices`,
+    version: 'v1.0',
+    downloads: 'New',
+    size: '45 MB',
+    category: 'Downloadable',
+    isNew: true,
+    iconColor: 'bg-yellow-600',
+    iconUrl: 'https://res.cloudinary.com/dbet2jfqo/image/upload/v1769678359/rwa_odwpzl.png',
+    logoUrl: 'https://res.cloudinary.com/dbet2jfqo/image/upload/v1769678359/rwa_odwpzl.png',
+    downloadUrl: 'https://github.com/vicky2official190-gif/Rojgar_with_ankit.apk/releases/download/v1.0/Rojgar_with_ankit.apk',
+    buttonText: 'Download APK'
   }
 ];
 
