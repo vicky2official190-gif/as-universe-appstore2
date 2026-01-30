@@ -11,14 +11,20 @@
     </script>
 
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#131520" />
+    <meta name="description" content="AS Universe AppStore - Your one-stop destination for premium educational apps and tools." />
+    <meta property="og:title" content="AS UNIVERSE APPSTORE" />
+    <meta property="og:description" content="Discover and download premium educational resources and applications." />
+    <meta property="og:type" content="website" />
+    
     <title>AS UNIVERSE APPSTORE</title>
 
     <link rel="icon" href="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6">
     <link rel="apple-touch-icon" href="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <script>
       tailwind.config = {
@@ -35,6 +41,9 @@
                 cyan: '#00b4d8',
                 accent: '#818cf8'
               }
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
             }
           }
         }
@@ -42,18 +51,23 @@
     </script>
 
     <style>
-      body { background-color: #131520; color: white; }
+      body { background-color: #131520; color: white; -webkit-tap-highlight-color: transparent; }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #131520; }
+      ::-webkit-scrollbar-thumb { background: #2a2d3d; border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: #4f46e5; }
     </style>
-  <script type="importmap">
+<script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
     "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react/": "https://esm.sh/react@^19.2.4/",
     "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
     "vite": "https://esm.sh/vite@^7.3.1",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
-    "@google/genai": "https://esm.sh/@google/genai@^1.38.0"
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
   }
 }
 </script>

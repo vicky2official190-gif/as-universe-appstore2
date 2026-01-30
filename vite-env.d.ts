@@ -1,9 +1,1 @@
-/// <reference types="vite/client" />
-
-interface ImportMetaEnv {
-  readonly API_KEY: string;
-}
-
-interface ImportMeta {
-  readonly env: ImportMetaEnv;
-}
+// Content moved to src/vite-env.d.ts to resolve type definition errors.

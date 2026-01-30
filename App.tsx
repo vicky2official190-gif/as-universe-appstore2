@@ -7,8 +7,8 @@ import About from './components/About';
 import SplashScreen from './components/SplashScreen';
 import AIChat from './components/AIChat';
 import WhatsAppPopup from './components/WhatsAppPopup';
-import { CATEGORIES } from './constants';
-import { Search, Users, Server, Zap, Star, GraduationCap, LayoutGrid, TrendingUp, Download, ChevronRight, ArrowRight, Quote, MessageCircle } from 'lucide-react';
+import { CATEGORIES, DATA_VERSION } from './constants';
+import { Search, Users, Server, Zap, Star, GraduationCap, LayoutGrid, TrendingUp, Download, ChevronRight, ArrowRight, Quote, MessageCircle, RefreshCw } from 'lucide-react';
 import { Category, AppItem } from './types';
 import { AppContextProvider, useApps } from './context/AppContext';
 
@@ -393,6 +393,14 @@ const App: React.FC = () => {
   const [showSplash, setShowSplash] = useState(true);
   const [activeView, setActiveView] = useState<ViewState>('store');
 
+  const handleHardRefresh = () => {
+      if (confirm("This will refresh the page and clear local cache to show the latest apps. Continue?")) {
+          // Clear just the version to force re-fetch from constants next load, or rely on browser reload
+          localStorage.removeItem('as_universe_version');
+          window.location.reload();
+      }
+  };
+
   return (
     <AppContextProvider>
        {/* FaviconHandler is placed inside Provider so it can access context */}
@@ -410,9 +418,15 @@ const App: React.FC = () => {
             </div>
 
             <footer className="py-8 text-center border-t border-white/5 bg-[#131520] relative z-10 pb-28 md:pb-12">
-                <p className="text-gray-600 text-[10px] font-bold tracking-[0.2em] uppercase hover:text-indigo-400 transition-colors cursor-default">
+                <p className="text-gray-600 text-[10px] font-bold tracking-[0.2em] uppercase hover:text-indigo-400 transition-colors cursor-default mb-2">
                   COPYRIGHT RESERVED AS AUNIVERSE
                 </p>
+                <div className="flex items-center justify-center gap-2 opacity-30 hover:opacity-100 transition-opacity">
+                    <span className="text-[10px] text-gray-500 font-mono">Build: {DATA_VERSION}</span>
+                    <button onClick={handleHardRefresh} title="Force Refresh Data">
+                        <RefreshCw size={10} className="text-gray-500 hover:text-white"/>
+                    </button>
+                </div>
             </footer>
             
             <AIChat />

@@ -1,6 +1,10 @@
 
 import { AppItem, AboutData, StoreSettings } from './types';
 
+// Changing this ID forces all users' browsers to reload data from this file
+// instead of using their stale LocalStorage data.
+export const DATA_VERSION = '2025-02-01-v2-deployment-fix';
+
 export const APP_DATA: AppItem[] = [
   {
     id: '1',
