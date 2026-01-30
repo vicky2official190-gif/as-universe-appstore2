@@ -1,5 +1,6 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import AppCard from './components/AppCard';
 import AdminPanel from './components/AdminPanel';
@@ -419,6 +420,7 @@ const App: React.FC = () => {
             <WhatsAppPopup />
           </div>
        )}
+       <Analytics />
     </AppContextProvider>
   );
 };
