@@ -14,16 +14,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#131520" />
     <meta name="description" content="AS Universe AppStore - Your one-stop destination for premium educational apps and tools." />
+
     <meta property="og:title" content="AS UNIVERSE APPSTORE" />
     <meta property="og:description" content="Discover and download premium educational resources and applications." />
     <meta property="og:type" content="website" />
-    
+
+    <!-- 🔥 VERSION TAG (CHANGE ON EVERY DEPLOY) -->
+    <meta name="app-version" content="v1.0.0" />
+
     <title>AS UNIVERSE APPSTORE</title>
 
     <link rel="icon" href="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6">
     <link rel="apple-touch-icon" href="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6">
 
+    <!-- Tailwind CDN (OK, React CDN NOT USED) -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <script>
@@ -51,31 +57,29 @@
     </script>
 
     <style>
-      body { background-color: #131520; color: white; -webkit-tap-highlight-color: transparent; }
-      /* Custom Scrollbar */
+      body {
+        background-color: #131520;
+        color: white;
+        -webkit-tap-highlight-color: transparent;
+      }
       ::-webkit-scrollbar { width: 8px; }
       ::-webkit-scrollbar-track { background: #131520; }
       ::-webkit-scrollbar-thumb { background: #2a2d3d; border-radius: 4px; }
       ::-webkit-scrollbar-thumb:hover { background: #4f46e5; }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
-    "vite": "https://esm.sh/vite@^7.3.1",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+
+    <!-- ❌ IMPORTMAP REMOVED -->
+    <!-- ❌ CDN REACT REMOVED -->
+    <!-- ❌ /index.tsx REMOVED -->
+
+    <!-- Optional global CSS -->
+    <link rel="stylesheet" href="/index.css">
+  </head>
 
   <body>
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+
+    <!-- ✅ ONLY VALID ENTRY POINT -->
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
