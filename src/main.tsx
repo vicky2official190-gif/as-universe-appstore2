@@ -19,3 +19,5 @@ ReactDOM.createRoot(
     <App />
   </React.StrictMode>
 );
+const APP_VERSION = 'v1.0.1';
+Add main.tsx entry point with cache-safe reload
