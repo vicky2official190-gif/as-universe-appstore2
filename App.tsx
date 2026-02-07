@@ -11,6 +11,7 @@ import { CATEGORIES, DATA_VERSION } from './constants';
 import { Search, Users, Server, Zap, Star, GraduationCap, LayoutGrid, TrendingUp, Download, ChevronRight, ArrowRight, Quote, MessageCircle, RefreshCw } from 'lucide-react';
 import { Category, AppItem } from './types';
 import { AppContextProvider, useApps } from './context/AppContext';
+import { Analytics } from '@vercel/analytics/react';
 
 type ViewState = 'store' | 'about' | 'admin';
 
@@ -431,6 +432,7 @@ const App: React.FC = () => {
             
             <AIChat />
             <WhatsAppPopup />
+            <Analytics />
           </div>
        )}
     </AppContextProvider>
