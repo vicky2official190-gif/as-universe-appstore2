@@ -1,0 +1,1 @@
+{"root":["./App.tsx","./constants.ts","./index.tsx","./types.ts","./vite-env.d.ts","./components/AIChat.tsx","./components/About.tsx","./components/AdminPanel.tsx","./components/AppCard.tsx","./components/Navbar.tsx","./components/SplashScreen.tsx","./components/WhatsAppPopup.tsx","./context/AppContext.tsx","./src/main.tsx","./src/vite-env.d.ts"],"version":"5.9.3"}
